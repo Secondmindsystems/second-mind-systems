@@ -20,7 +20,7 @@ The current release provides:
 - local proof receipts for hook-governed commit decisions; and
 - Windows and tested-host macOS validation, with native Linux validation still pending.
 
-AI Protected Paths is available on Gumroad. The direct product link will be added here once its public URL is verified.
+[Get AI Protected Paths on Gumroad](https://secondmind.gumroad.com/l/aigtpg).
 
 ## Private pilot
 
