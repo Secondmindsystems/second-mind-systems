@@ -4,6 +4,8 @@ AI can write and change software quickly. The difficult question is no longer on
 
 Second Mind Systems builds practical control and evidence tools for AI-assisted software work.
 
+Read our public positioning paper: [Behavior Profiles — The Meta Layer Behind AI Skills](BEHAVIOR_PROFILES.md).
+
 ## Available now
 
 ### AI Protected Paths
