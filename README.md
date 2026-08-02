@@ -57,6 +57,7 @@ sha256:10a2135e3e8127ab8ed9d17759d8507e424d0aba2ad73afaa183bf9cf00778f4
 ```
 
 Independent third-party reproduction on separate hardware remains pending.
+[Run the demo and return PASS, FAIL, or CONFUSED](https://github.com/Secondmindsystems/governed-change-demo/issues/1).
 
 The [Governed AI Systems Portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio) provides the broader evidence trail, architecture explanations, claim boundaries, sanitized receipts, and a public evidence-packet verifier.
 
