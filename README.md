@@ -47,10 +47,10 @@ The standalone [Governed Change Demo](https://github.com/Secondmindsystems/gover
 - deterministic `BLOCK → repair → PASS` behavior;
 - fail-closed `HOLD` and `BLOCK` cases;
 - hash-linked governed receipts;
-- 73 automated tests; and
+- 76 automated tests; and
 - a GitHub Actions validation workflow.
 
-The published repository has been reproduced from a clean network clone with 73 of 73 tests passing and the fixed replay identity reproduced byte-identically:
+The published repository has been reproduced from a clean network clone with 76 of 76 tests passing and the fixed replay identity reproduced byte-identically:
 
 ```text
 sha256:10a2135e3e8127ab8ed9d17759d8507e424d0aba2ad73afaa183bf9cf00778f4
