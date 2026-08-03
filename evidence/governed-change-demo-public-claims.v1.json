@@ -1,0 +1,53 @@
+{
+  "schema": "governed-change-demo.public-claims/v1",
+  "source": {
+    "repository": "https://github.com/Secondmindsystems/governed-change-demo",
+    "evidence_basis_commit": "dad7aeed98fbd42f58a68d370aa77eb032ea5883",
+    "metrics_document": "docs/VERIFIED_METRICS.md"
+  },
+  "deterministic_prototype": {
+    "contract_count": 6,
+    "test_count": 76,
+    "replay_runs": 5,
+    "replay_identity": "sha256:10a2135e3e8127ab8ed9d17759d8507e424d0aba2ad73afaa183bf9cf00778f4",
+    "canonical_replay_bytes": 25194,
+    "policy_hashes": {
+      "cap_policy": "sha256:32537c05c37be5a419790b4576edb9901b3ae1418f5693c75c1a01c8ef86f6b3",
+      "path_gate": "sha256:cc3e424331e5eff147dc5192ee97a2907533f953eb029c41fde5f8d569a0cfeb",
+      "claims_gate": "sha256:d7210ff1bd1244bff5620cded67e041105389089bb6e1184774204b583f33098"
+    },
+    "blocked_revision": {
+      "cap": "PASS",
+      "path_gate": "BLOCK",
+      "claims_gate": "BLOCK",
+      "combined": "BLOCK",
+      "receipt_id": "receipt-2bbc3c4b0305f8394b83",
+      "receipt_hash": "sha256:1a2dd8d031b21da78390bbbcdb626bbdfa89ba628520194de17d69607fc9f505"
+    },
+    "repaired_revision": {
+      "cap": "PASS",
+      "path_gate": "PASS",
+      "claims_gate": "PASS",
+      "combined": "PASS",
+      "receipt_id": "receipt-51bbb2e71998a45e59ff",
+      "receipt_hash": "sha256:54346099dfef791368c87c2b259e6399ebb683ec4a37e90880c0d05989e6e8d8",
+      "cap_rechecked": true
+    }
+  },
+  "fixture_claims": {
+    "blocked_path": "config/production-mode.json",
+    "blocked_claim": "This repository change is production-ready and secure for customer deployment.",
+    "repaired_path": "docs/public/governed-change-result.md"
+  },
+  "reproduction_state": {
+    "maintainer_clean_clone": "PASS",
+    "basis": "docs/VERIFIED_METRICS.md",
+    "independent_third_party": "PENDING",
+    "required_limitation": "Independent third-party reproduction on separate hardware remains pending."
+  },
+  "verification": {
+    "workflow": ".github/workflows/flagship-validation.yml",
+    "verifier": "tools/verify_public_claims.py"
+  },
+  "claim_boundary": "These values describe fixed public prototype inputs and outputs. They do not establish production, deployment, security, compliance, customer, market, adoption, or independent third-party validation."
+}
