@@ -1,0 +1,7 @@
+{
+  "schema": "second-mind-systems.evidence-binding/v1",
+  "source_repository": "https://github.com/Secondmindsystems/governed-change-demo",
+  "source_commit": "e4b79fc87b37d5afa17ab654e7c132d3c723c123",
+  "source_path": "evidence/public-claims.v1.json",
+  "snapshot_sha256": "sha256:cdb4d5acd6fff88fac51a76ec7fd0a3824f96b872bc50516e00f2c671f523af8"
+}
