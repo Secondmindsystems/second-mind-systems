@@ -16,7 +16,7 @@ SOURCE = ROOT / "evidence" / "governed-change-demo-public-claims.v1.source.json"
 REQUIRED_TEXT = (
     "https://github.com/Secondmindsystems/governed-change-demo",
     "https://github.com/Secondmindsystems/governed-ai-systems-portfolio",
-    "https://secondmind.gumroad.com/l/aigtpg",
+    "Protected Paths is a prior engineering artifact.",
     "[Behavior Profiles — The Meta Layer Behind AI Skills](BEHAVIOR_PROFILES.md)",
     "76 automated tests",
     "76 of 76 tests passing",
