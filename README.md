@@ -214,7 +214,7 @@ The [Governed AI Systems Portfolio](https://github.com/Secondmindsystems/governe
 * General authorization to execute repository changes.
 * That a receipt automatically makes a claim true, grants authority, or creates trust.
 
-## Related products and controls
+## Related engineering systems and controls
 
 ### Governed Repo
 
@@ -235,7 +235,9 @@ It provides:
 * blocking on the normal Git pre-commit path when approval is absent;
 * and local proof receipts for hook-governed commit decisions.
 
-**[Get AI Protected Paths on Gumroad](https://secondmind.gumroad.com/l/aigtpg)**
+Protected Paths is a prior engineering artifact. Its public evidence package
+is being reconciled against the independently tested v1.0.1 release boundary;
+no commercial download link is currently offered here.
 
 AI Protected Paths is not cryptographic security, remote organization-wide enforcement, branch protection, or protection against `git commit --no-verify` or hook removal.
 

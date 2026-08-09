@@ -253,7 +253,7 @@ Together, they form a more complete approach to governed AI-assisted work.
 
 ## Protected Paths as a Bounded Enforcement Primitive
 
-[AI Protected Paths](https://secondmind.gumroad.com/l/aigtpg) is one practical Second Mind Systems product positioned further along this progression.
+AI Protected Paths is one practical Second Mind Systems engineering artifact positioned further along this progression. Its public evidence package is currently being reconciled against the independently tested v1.0.1 release boundary.
 
 It governs designated files at the normal local Git commit boundary.
 
