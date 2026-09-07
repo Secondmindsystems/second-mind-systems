@@ -1,326 +1,71 @@
 # Second Mind Systems
 
-## Governed Repo — One Change. Two Gates. One Receipt.
+We build harnesses, tools, and workflows that help AI systems handle real work more reliably: shaping task boundaries and behavior, evaluating proposed changes, adding checkpoints where actions need approval, and preserving evidence about what happened.
 
-**Working code is not always acceptable work.**
+An AI-generated change can pass its technical tests and still touch a file
+outside the assignment. An agent can finish the requested task and keep going.
+Our public projects address these problems at different points in the workflow.
 
-Code review asks whether a change works. Governed Repo also checks whether it was authorized, stayed in bounds, and made only claims the evidence supports.
+**[Explore the engineering portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio)**
+· **[Run the change-evaluation demo](https://github.com/Secondmindsystems/governed-change-demo)**
 
-An AI can produce a technically valid repository change that still exceeds its assignment, touches the wrong files, or makes claims its evidence does not support.
+## Public projects
 
-**Governed Repo checks those conditions before the change is trusted.**
+| Project | What it does |
+| --- | --- |
+| [Behavior Profiles](https://github.com/Secondmindsystems/Behavior-Profiles) | The meta layer behind AI skills: behavioral specifications for conduct across tasks and capabilities. Scope Control is the first reference profile. |
+| [Governed Change Demo](https://github.com/Secondmindsystems/governed-change-demo) | Evaluates synthetic proposed-change snapshots against declared permissions, paths, and evidence, preserving blocked and repaired results. |
+| [AI Protected Paths](https://github.com/Secondmindsystems/ai-protected-paths) | Requires one-use approval for configured paths at the normal local Git commit boundary. |
+| [Protected Enterprise Agent](https://github.com/Secondmindsystems/protected-enterprise-agent) | A synthetic-data support prototype combining protected retrieval, model-request checks, and evidence recording. |
 
-**[Run the five-minute demo](https://github.com/Secondmindsystems/governed-change-demo)** · **[Inspect the evidence portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio)**
+## How the projects relate
 
-> The public demonstration proves deterministic evaluation of declared change snapshots and hash-linked receipt generation under fixed inputs and policies. It does not establish security, production readiness, live repository enforcement, customer validation, or execution authority.
+Behavior Profiles describe how an agent should conduct work across its skills.
+The Governed Change Demo evaluates proposed work against explicit constraints.
+AI Protected Paths adds a checkpoint to a local commit workflow. Protected
+Enterprise Agent brings retrieval and model boundaries into a support application.
 
-## What changes operationally
+These are separate projects, not a single installed platform. Each repository
+provides its own setup, evidence, and operating conditions.
 
-Without an explicit control boundary, a change can pass technical tests while its real failures remain buried in the diff, prompt history, repository settings, evidence, or reviewer judgment.
+Read the original [Behavior Profiles thesis: The Meta Layer Behind AI Skills](BEHAVIOR_PROFILES.md).
+For responsibility- or capability-based evaluation, use the
+[engineering portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio).
 
-Governed Repo makes those failures produce a visible result:
+## Work with Second Mind Systems
 
-```text
-technically valid + outside authority
-→ BLOCK
+### Behavior Profile Lab — founding diagnostic engagement
 
-technically valid + wrong repository path
-→ BLOCK
+Bring one recurring problem in an AI workflow or system, along with real
+examples of what keeps happening. We reconstruct the problem from evidence,
+identify the recurring failure, and define the behavior and boundaries needed.
+When warranted, we create a control or specification, evaluation cases, and
+a clear path for applying the result.
 
-technically valid + claims the evidence does not support
-→ BLOCK
+The founding offer is **$200 for one qualifying bounded engagement, for the
+first 10 engagements.** For a problem that fits the Lab, this is the complete
+bounded engagement—not a consultation that only tells you what to buy next.
+Hands-on code changes, integrations, deployment, and live-system work are
+separately scoped.
 
-repaired + completely rechecked + aligned
-→ PASS
-```
+To ask about fit, email **secondmindsystems@gmail.com** with a short description
+of the recurring problem. Do not send credentials, private code, sensitive
+records, or confidential material in your first message.
 
-A blocked change is not overwritten or quietly approved later.
+### Implementation and collaboration
 
-The repair becomes a new revision, re-enters through the authority and context check, reruns both gates, and preserves the earlier `BLOCK` in a linked receipt.
+We welcome consulting, implementation, pilot, and technical collaboration involving **AI systems, AI harnesses, agent behavior, evaluation, authorization, developer safeguards, and AI-assisted workflows.**
 
-The change does not count merely because the code works. The declared authority, repository boundaries, claims, evidence, and policies must align.
+Tell us what you are trying to accomplish, what keeps going wrong, and which
+tools are involved.
 
-## The executable episode
+**Email: secondmindsystems@gmail.com**
 
-A **declared snapshot** is a frozen, complete description of a proposed repository change.
+For a public discussion, [open an issue](https://github.com/Secondmindsystems/second-mind-systems/issues/new).
+GitHub issues are public; do not include credentials, confidential code,
+customer records, or private instructions.
 
-The public demonstration evaluates one such snapshot.
-
-Its central fixture begins with an AI-assisted change that creates two independent failures:
-
-1. It proposes writing to `config/production-mode.json`, outside the declared path authority.
-2. It claims, “This repository change is production-ready and secure for customer deployment,” even though the declared evidence does not support that claim or include its required limitations.
-
-This is not an illustrative scenario. It is the public demo’s actual blocked fixture.
-
-The code itself may be technically plausible. The proposed change still returns:
-
-```text
-CAP — authority and context precheck:  PASS
-Path Gate — where it writes:           BLOCK
-Claims Gate — what it asserts:         BLOCK
-Combined result:                       BLOCK
-```
-
-The repair:
-
-* removes the unauthorized configuration operation;
-* moves the permitted edit to `docs/public/governed-change-result.md`;
-* narrows the production and security claim to a bounded process description that the evidence supports;
-* increments the revision;
-* reruns the authority and context check;
-* reruns both domain gates.
-
-The repaired revision returns:
-
-```text
-CAP — authority and context precheck:  PASS
-Path Gate — where it writes:           PASS
-Claims Gate — what it asserts:         PASS
-Combined result:                       PASS
-```
-
-The `PASS` receipt links to the earlier `BLOCK` receipt by both receipt ID and full SHA-256 hash.
-
-The accepted result therefore preserves not only what passed, but what originally failed and why.
-
-Clone the repository, run the demonstration, and reproduce the same `BLOCK`, bounded repair, complete re-evaluation, and linked `PASS` receipt on your machine.
-
-**[Run it now](https://github.com/Secondmindsystems/governed-change-demo)**
-
-## Why this matters
-
-Most AI-assisted repository changes are ordinary.
-
-The risk lies in the smaller set that looks technically plausible while crossing a boundary that was never made explicit—or asserting more than the evidence can support.
-
-Examples include:
-
-* a workflow file that broadens deployment permissions;
-* a release note claiming tests passed when no closed test evidence exists;
-* an AI change touching authentication, billing, infrastructure, or migration files outside its assignment;
-* generated documentation claiming security or production readiness without supporting evidence;
-* a governance or approval file that weakens the checks governing the change.
-
-Governed Repo makes those boundaries and evidence gaps visible before the change is accepted.
-
-It checks:
-
-* whether the proposed work is authorized;
-* whether it writes only where it is allowed;
-* whether its claims are supported by the declared evidence;
-* whether required limitations are present;
-* whether every required check actually ran;
-* and what record should remain after the decision.
-
-The current public demo evaluates declared snapshots representing these situations. It does not inspect, enforce, or modify a live worktree.
-
-## What Governed Repo makes reviewable
-
-Governed Repo brings the information needed to judge one proposed change into a single reviewable process.
-
-It makes visible:
-
-* **Authority** — who is permitted to propose the work and what they were permitted to do.
-* **Scope** — which repository locations and operations the change is allowed to affect.
-* **Claims** — what the changed material says and whether the declared evidence supports it.
-* **Readiness** — whether the required context, policies, evidence, and checks are present and current.
-* **Decision completeness** — whether every required condition was evaluated before the result became `BLOCK`, `HOLD`, or `PASS`.
-* **Repair history** — what originally failed, what changed in the repair, and whether the full evaluation ran again.
-* **Decision evidence** — what was examined, which boundaries applied, what the outcome was, and why it counted.
-
-The result is not merely another review report.
-
-It is a visible acceptance boundary: the change does not count simply because the code works.
-
-```text
-proposed change
-→ authority, scope, and evidence checked
-→ BLOCK, HOLD, or PASS
-→ repair fully rechecked
-→ decision history preserved
-```
-
-Governed Repo does not execute the change or grant permission to execute it.
-
-## Why this is technically non-trivial
-
-* Permission, repository policy, and supporting evidence are different questions.
-* Path and claim evaluation require materially different policy logic.
-* A skipped, unavailable, malformed, or stale check cannot silently become `PASS`.
-* Claims must be evaluated against declared evidence rather than accepted because they sound plausible.
-* A repaired revision must re-enter through the authority and context precheck rather than resume after the failed gate.
-* A later `PASS` must preserve the earlier `BLOCK` rather than overwrite it.
-* Fixed inputs, evaluator versions, policies, evidence, and evaluation time must reproduce the same decision and canonical receipt.
-* Public claims about the demonstration are bound to machine-readable evidence and checked in CI rather than maintained only as prose.
-
-This is not one scanner with several labels.
-
-It is a staged acceptance process in which distinct checks retain their own evidence while contributing to one reviewable disposition.
-
-## What you can verify now
-
-The standalone [Governed Change Demo](https://github.com/Secondmindsystems/governed-change-demo) uses only Python’s standard library and includes:
-
-* six strict JSON contracts;
-* a Context and Authority Precheck;
-* two independent policy gates;
-* deterministic `BLOCK → repair → PASS`;
-* fail-closed `BLOCK` and `HOLD` cases;
-* evidence-aware claims evaluation;
-* hash-linked governed receipts;
-* 76 automated tests;
-* a machine-readable public claims manifest;
-* a claims-manifest verifier;
-* and a GitHub Actions validation workflow.
-
-The published instructions have been reproduced from a clean network clone with 76 of 76 tests passing.
-
-Expected replay identity:
-
-```text
-sha256:10a2135e3e8127ab8ed9d17759d8507e424d0aba2ad73afaa183bf9cf00778f4
-```
-
-Independent third-party reproduction on separate hardware remains pending.
-
-**[Run the demo and return PASS, FAIL, or CONFUSED](https://github.com/Secondmindsystems/governed-change-demo/issues/1)**
-
-The [Governed AI Systems Portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio) provides the broader architecture, sanitized receipts, bounded public claims, verification record, and limitations.
-
-## What has been demonstrated
-
-* Deterministic evaluation for fixed fixtures, policies, evaluator versions, evidence, and evaluation time.
-* Two materially different gates operating on one shared description of the proposed change.
-* Fail-closed authority, context, path, claim, evidence, and malformed-input outcomes.
-* A visible blocked revision followed by a bounded repaired revision.
-* Complete authority, context, and gate re-evaluation after repair.
-* Claims narrowed to what the declared evidence supports.
-* Receipt linkage preserving the earlier decision.
-* Byte-identical replay.
-* Clean-clone execution of the published commands.
-* Machine-verifiable binding between public claims and demonstration evidence.
-* Public evidence-packet integrity checking for the portfolio.
-* Local AI Protected Paths behavior in its stated tested environments.
-
-## What has not been demonstrated
-
-* Production or deployment readiness.
-* Security, tamper resistance, branch protection, certification, or regulatory compliance.
-* Live worktree enforcement or automatic repository mutation by the public demo.
-* Multi-agent, concurrent, high-scale, or production adversarial robustness.
-* Production performance, capacity, availability, or latency.
-* Customer adoption, market demand, or independent third-party validation.
-* General authorization to execute repository changes.
-* That a receipt automatically makes a claim true, grants authority, or creates trust.
-
-## Related engineering systems and controls
-
-### Governed Repo
-
-Governed Repo makes the authority, repository boundaries, claims, evidence, decision, and repair history of an AI-assisted change reviewable before the change is trusted.
-
-The public demonstration evaluates declared change snapshots. The broader private MVP extends the same control pattern to a read-only view of live repository state.
-
-### AI Protected Paths
-
-AI Protected Paths adds an explicit local approval step before normal Git commits can modify files designated as sensitive.
-
-It creates commit-time friction around configured paths such as authentication, billing, infrastructure, migrations, prompts, governance, and release configuration.
-
-It provides:
-
-* configurable protected-file boundaries;
-* an explicit local approval-token workflow;
-* blocking on the normal Git pre-commit path when approval is absent;
-* and local proof receipts for hook-governed commit decisions.
-
-Protected Paths is a prior engineering artifact. Its public evidence package
-is being reconciled against the independently tested v1.0.1 release boundary;
-no commercial download link is currently offered here.
-
-AI Protected Paths is not cryptographic security, remote organization-wide enforcement, branch protection, or protection against `git commit --no-verify` or hook removal.
-
-### Behavior Profiles
-
-**Skills describe what an agent knows how to do.**
-
-Behavior Profiles describe how the agent is expected to conduct itself while using those skills—including how it handles scope, uncertainty, authority, evidence, escalation, and stopping conditions.
-
-A coding skill may know how to modify a repository. A Behavior Profile can require the agent to remain within the assignment, surface uncertainty, preserve evidence, and stop before crossing an authority boundary.
-
-Read: [Behavior Profiles — The Meta Layer Behind AI Skills](BEHAVIOR_PROFILES.md).
-
-This paper presents a category argument. It does not claim a validated universal behavioral standard or complete general-purpose enforcement runtime.
-
-### Surface
-
-Surface is an advisory product-intelligence instrument used to pressure-test positioning, documentation, claims, packaging, and readiness.
-
-Surface is currently used inside our own product reviews.
-
-**A public version is coming soon.**
-
-It is not part of Governed Repo’s deterministic repository-policy path.
-
-## The broader direction
-
-As AI agents become capable of making larger and faster changes, technical capability alone is not enough.
-
-Organizations also need infrastructure that makes authority, scope, policy, evidence, agent conduct, and decision history visible before automated work is accepted.
-
-The products above approach that problem from different operating points:
-
-* Behavior Profiles shape how agents are expected to use their skills.
-* Surface exposes problems in understanding, claims, packaging, and readiness.
-* Governed Repo evaluates whether proposed work should be accepted.
-* AI Protected Paths creates an explicit local checkpoint before sensitive changes are committed.
-
-Together, they point toward a broader control layer for keeping increasingly capable AI work bounded, reviewable, attributable, and evidence-backed.
-
-The public artifacts demonstrate bounded parts of that direction. They do not establish enterprise readiness, production enforcement, organization-wide deployment, or regulatory compliance.
-
-## Work with us
-
-We are interested in working with teams that are beginning to ask:
-
-* Which actions should an AI agent be allowed to take?
-* How should agents conduct themselves while using increasingly powerful skills?
-* Which repository changes require an explicit human checkpoint?
-* How should authority, scope, evidence, and limitations be declared before automated work is accepted?
-* What decision record should remain after work is blocked, repaired, or approved?
-
-Relevant engagements may include:
-
-* a private Governed Repo pilot around a real repository workflow;
-* evaluation of an existing AI-assisted change process;
-* collaboration on governed-agent infrastructure;
-* technical or product-design partnerships;
-* strategic conversations with organizations or investors aligned with verifiable AI control systems.
-
-The public demo is a bounded proof of the control pattern.
-
-Private work can explore how those controls apply to a specific team, repository, or agent workflow.
-
-**[Open a private pilot or collaboration inquiry](https://github.com/Secondmindsystems/second-mind-systems/issues/new)** and describe the workflow, tools, and control problem involved.
-
-## Closing
-
-Most AI-assisted repository changes are ordinary and can move through normal review.
-
-The problem is the smaller set that looks fine while crossing a line no one drew—or claiming more than the evidence can carry.
-
-Governed Repo makes that set visible, evaluates it, and preserves why the result counted.
-
-**[Run the five-minute demo](https://github.com/Secondmindsystems/governed-change-demo)** · **[Inspect the evidence](https://github.com/Secondmindsystems/governed-ai-systems-portfolio)** · **[Report PASS, FAIL, or CONFUSED](https://github.com/Secondmindsystems/governed-change-demo/issues/1)**
-
-## Authorship and AI collaboration
-
-I defined the objectives, system architecture, authority model, constraints, acceptance gates, evidence requirements, claim limits, and integration decisions.
-
-AI agents performed bounded implementation, analysis, drafting, testing, and review work under those controls.
-
-Receipts preserve inspectable evidence.
+Want to evaluate the engineering? [Meet Tavio](https://github.com/Secondmindsystems) · [Inspect the engineering portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio)
 
 ## Rights
 
