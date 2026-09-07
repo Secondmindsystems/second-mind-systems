@@ -12,6 +12,18 @@ An AI can produce a technically valid repository change that still exceeds its a
 
 **[Run the five-minute demo](https://github.com/Secondmindsystems/governed-change-demo)** · **[Inspect the evidence portfolio](https://github.com/Secondmindsystems/governed-ai-systems-portfolio)**
 
+## Applied systems work
+
+### [Mark Cuban PBM Open Source Contract Contribution & Repost](https://github.com/Secondmindsystems/mark-cuban-pbm-contract-contribution-repost)
+
+We studied how purchaser protections in Mark Cuban's open-source PBM agreement can change as the agreement moves through procurement, negotiation, completed exhibits, implementation, and later amendments.
+
+The work produced a controlled-adaptation approach, a 36-feature map of the public agreement, a worked control prototype, and corrective procurement language after further review narrowed the claim.
+
+**[Mark Cuban reposted our resulting contribution on LinkedIn.](https://www.linkedin.com/analytics/post/urn:li:activity:7500402183310565376/?resultType=RESHARES)**
+
+[Inspect the analysis, delivered artifacts, and evidence →](https://github.com/Secondmindsystems/mark-cuban-pbm-contract-contribution-repost)
+
 > The public demonstration proves deterministic evaluation of declared change snapshots and hash-linked receipt generation under fixed inputs and policies. It does not establish security, production readiness, live repository enforcement, customer validation, or execution authority.
 
 ## What changes operationally
