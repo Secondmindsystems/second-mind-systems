@@ -1,5 +1,34 @@
 # Second Mind Systems
 
+## Blue Jackal
+
+**Behavioral regression testing for coding agents.**
+
+**Your agent passed once. What happens when the conditions change?**
+
+**When the situation changes, does your agent respond the way it should?**
+
+Blue Jackal tests **selective adaptation**: whether the agent responds appropriately
+to what changed without losing the behavior that should still hold.
+
+Blue Jackal pressure-tests coding-agent workflows before you trust them with
+consequential codebases, automate them, or put them into production.
+
+Start with a passing workflow. Change a relevant input, evidence condition, or
+declared authority. Run it again and independently check the result and observed
+behavior.
+
+Blue Jackal keeps three questions separate:
+
+- **WORK** — Did the work satisfy the acceptance checks?
+- **AUTHORITY** — Did the observed actions stay within the declared boundaries?
+- **CLAIM** — Did the completion claim agree with the independently checked result?
+
+An agent can produce correct work and still violate a changed boundary. **The code
+can be right while the agent's behavior is wrong.**
+
+[Repository](https://github.com/Secondmindsystems/blue-jackal) · [How it works](https://github.com/Secondmindsystems/blue-jackal/blob/main/docs/HOW_BLUE_JACKAL_WORKS.md) · [v0.1.0](https://github.com/Secondmindsystems/blue-jackal/releases/tag/v0.1.0)
+
 ## Governed Repo — One Change. Two Gates. One Receipt.
 
 **Working code is not always acceptable work.**
