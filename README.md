@@ -1,5 +1,20 @@
 # Second Mind Systems
 
+## Blue Jackal — Behavioral regression testing for coding agents
+
+**Your agent passed once. What happens when the conditions change?**
+
+Blue Jackal is for teams turning coding agents from experiments into repeatable
+engineering workflows. It changes relevant operating conditions and checks
+whether the agent still satisfies its declared contract.
+
+Unit tests check the code. Blue Jackal checks whether the agent's behavior still
+holds when inputs, evidence, or authority change.
+
+**[Explore Blue Jackal](https://github.com/Secondmindsystems/blue-jackal)** ·
+**[See how it works](https://github.com/Secondmindsystems/blue-jackal/blob/main/docs/HOW_BLUE_JACKAL_WORKS.md)** ·
+**[Download v0.1.0](https://github.com/Secondmindsystems/blue-jackal/releases/tag/v0.1.0)**
+
 ## Governed Repo — One Change. Two Gates. One Receipt.
 
 **Working code is not always acceptable work.**
